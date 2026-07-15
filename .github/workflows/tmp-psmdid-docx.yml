@@ -18,11 +18,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: psmdid-docx-package
-          path: |
-            tmp/docx_build/docx_package/[Content_Types].xml
-            tmp/docx_build/docx_package/_rels
-            tmp/docx_build/docx_package/word
-            tmp/docx_build/docx_package/docProps
+          path: tmp/docx_build/docx_package/
           include-hidden-files: true
           if-no-files-found: error
           compression-level: 0
