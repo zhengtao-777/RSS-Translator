@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<meta name="Originator" content="Microsoft Word 15">
+<title>第6章6.3.2（3）PSM-DID</title>
+<style>
+@page { size: 21cm 29.7cm; margin: 2.54cm 2.54cm 2.54cm 3.17cm; }
+body { font-family: SimSun, 宋体, serif; font-size: 12pt; line-height: 1.75; color:#000; }
+p { margin: 0 0 8pt 0; text-align: justify; text-indent: 2em; }
+h1 { font-size: 14pt; font-weight: bold; text-align: left; margin: 0 0 12pt 0; }
+.table-title { text-align:center; text-indent:0; font-size:12pt; margin:10pt 0 5pt 0; }
+.note { font-size:9pt; line-height:1.45; text-indent:0; margin-top:5pt; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; margin: 0 auto 10pt auto; font-size:9pt; line-height:1.35; }
+th, td { padding:4px 5px; text-align:center; vertical-align:middle; word-break:break-all; }
+.academic { border-top:1.5pt solid #000; border-bottom:1.5pt solid #000; }
+.academic thead th { border-bottom:0.75pt solid #000; font-weight:normal; }
+.academic tbody tr.sep td { border-top:0.5pt solid #000; }
+.design th, .design td { border:0.6pt solid #000; }
+.design th { font-weight:normal; }
+.figure-box { height:165px; border:1.2pt dashed #888; display:flex; align-items:center; justify-content:center; text-align:center; margin:8pt auto 3pt auto; width:82%; font-size:11pt; color:#555; }
+.figure-title { text-align:center; text-indent:0; font-size:10.5pt; margin:0 0 10pt 0; }
+.small { font-size:9pt; }
+.page-break { page-break-before:always; }
+.no-indent { text-indent:0; }
+</style>
+</head>
+<body>
+<h1>（3）倾向得分匹配与双重差分法（PSM-DID）</h1>
+
+<p>为进一步缓解核心企业供应链金融参与与供应链系统特征之间可能存在的可观测样本自选择问题，本文在工具变量法和Heckman两阶段回归之外，进一步采用倾向得分处理与双重差分相结合的方法进行检验。具体而言，本文首先依据处理发生前核心企业及其上游供应商组合的财务特征、治理特征、经营状况和供应链结构特征估计企业进入相应供应链金融处理状态的概率，并通过匹配、共同支撑限制或倾向得分加权提高处理组与控制组的可比性；随后在相应样本中构造双重差分模型，考察核心企业供应链金融采用强度提高或首次承担供应链金融供给方角色后，供应链运营韧性、生态韧性和演进韧性是否发生显著变化。</p>
+
+<p>与基准回归、工具变量法和Heckman两阶段检验的处理保持一致，本部分围绕五条已经形成显著经验事实的关系展开：一是供应链金融采用强度对供应链经营效率水平的正向影响；二是企业以供应链金融供给方参与供应链金融安排对供应链经营效率水平的负向影响；三是供应链金融采用强度对供应商关系延续程度的正向影响；四是供给方参与对供应商关系延续程度的正向影响；五是供应链金融采用强度对创新质量趋势稳定性的正向影响。对于基准回归中未形成显著结果的供给方参与与创新质量趋势稳定性关系，本部分不再进行延伸检验。</p>
+
+<p>由于SCF_exp为连续变量，本文依据其正值样本的分位点构造高供应链金融采用强度处理组。其中，exp75用于检验供应链金融采用强度对供应链经营效率水平的影响，exp50用于检验其对供应商关系延续程度的影响，exp90用于检验其对创新质量趋势稳定性的影响。企业首次达到相应采用强度阈值的年份被界定为处理发生年份，此后年份为处理后时期。对于SCF_focal，本文以企业首次明确作为供应链金融供给方参与供应链金融安排的年份作为处理发生年份，并分别考察其对供应链经营效率和供应商关系延续的影响。倾向得分模型中的协变量原则上均使用处理发生前或滞后一期信息，以避免将处理后的经营结果纳入匹配方程。</p>
+
+<p class="table-title">表6-11　PSM-DID处理口径、匹配诊断与图件排布说明</p>
+<table class="design">
+<colgroup><col style="width:11%"><col style="width:22%"><col style="width:22%"><col style="width:30%"><col style="width:15%"></colgroup>
+<thead><tr><th>处理口径</th><th>处理定义</th><th>对应检验路径</th><th>匹配诊断重点</th><th>对应图件</th></tr></thead>
+<tbody>
+<tr><td>exp75</td><td>SCF_exp达到正值样本第75百分位及以上，首次达到阈值为处理年</td><td>SCF_exp→供应链经营效率水平</td><td>检验较高采用强度企业与控制组在经营、财务及供应商组合特征上的共同支撑与平衡性</td><td>图6-1a、图6-1b、图6-5</td></tr>
+<tr><td>focal</td><td>企业首次以供应链金融供给方参与供应链金融安排</td><td>SCF_focal→供应链经营效率水平；SCF_focal→供应商关系延续程度</td><td>供给方企业通常具有更强信用基础和生态组织能力，应重点检验企业异质性在匹配后是否收敛</td><td>图6-2a、图6-2b、图6-6</td></tr>
+<tr><td>exp50</td><td>SCF_exp达到正值样本第50百分位及以上，首次达到阈值为处理年</td><td>SCF_exp→供应商关系延续程度</td><td>检验中等以上采用强度企业与控制组在关系结构、供应商组合及经营基础上的可比性</td><td>图6-3a、图6-3b、图6-7</td></tr>
+<tr><td>exp90</td><td>SCF_exp达到正值样本第90百分位及以上，首次达到阈值为处理年</td><td>SCF_exp→创新质量趋势稳定性</td><td>检验高采用强度企业与控制组在研发基础、创新能力和企业特征上的平衡性</td><td>图6-4a、图6-4b、图6-8</td></tr>
+</tbody>
+</table>
+<p class="note">注：本表用于说明第六章PSM-DID的处理口径、对应路径及图件位置。正式插图时，应依据最终匹配输出补充匹配前后样本量、共同支撑区间和标准化差异等诊断信息，不以推测值替代。</p>
+
+<p>倾向得分分布图用于判断处理组与控制组是否具有充分的共同支撑，以及匹配或加权后两组在可观测特征上的可比性是否提高。正文解释时应重点比较匹配前后两组分布曲线的重叠程度、尾部差异及共同支撑区间。只有在实际图形支持时，才能表述为“匹配后分布进一步接近，共同支撑条件基本得到满足”。</p>
+
+<div class="figure-box">【此处插入图6-1a：exp75口径下匹配前倾向得分分布】</div>
+<p class="figure-title">图6-1a　exp75口径下匹配前倾向得分分布</p>
+<div class="figure-box">【此处插入图6-1b：exp75口径下匹配后倾向得分分布】</div>
+<p class="figure-title">图6-1b　exp75口径下匹配后倾向得分分布</p>
+<p>图6-1a和图6-1b服务于供应链金融采用强度对供应链经营效率水平的检验。若匹配后处理组与控制组曲线更加贴近，说明较高采用强度企业与可比控制组在处理前企业特征和供应商组合特征上的差异得到缓解，为后续双重差分估计提供更稳健的样本基础。</p>
+
+<div class="figure-box">【此处插入图6-2a：focal口径下匹配前倾向得分分布】</div>
+<p class="figure-title">图6-2a　focal口径下匹配前倾向得分分布</p>
+<div class="figure-box">【此处插入图6-2b：focal口径下匹配后倾向得分分布】</div>
+<p class="figure-title">图6-2b　focal口径下匹配后倾向得分分布</p>
+<p>图6-2a和图6-2b对应供给方参与口径，同时服务于供给方参与对经营效率和供应商关系延续的检验。由于承担供应链金融供给方角色的企业通常具有较强信用基础、平台组织能力和供应链治理能力，匹配前两组可能存在更明显差异；匹配后分布若明显收敛，说明处理组与控制组的可比性得到改善。</p>
+
+<div class="figure-box">【此处插入图6-3a：exp50口径下匹配前倾向得分分布】</div>
+<p class="figure-title">图6-3a　exp50口径下匹配前倾向得分分布</p>
+<div class="figure-box">【此处插入图6-3b：exp50口径下匹配后倾向得分分布】</div>
+<p class="figure-title">图6-3b　exp50口径下匹配后倾向得分分布</p>
+<p>图6-3a和图6-3b用于检验供应链金融采用强度对供应商关系延续程度的影响。该口径强调企业采用强度达到中等以上水平后，账期安排、交易预期和信用识别能否转化为供应链关系稳定收益，因此应重点观察匹配后关系结构和供应商组合特征是否趋于平衡。</p>
+
+<div class="figure-box">【此处插入图6-4a：exp90口径下匹配前倾向得分分布】</div>
+<p class="figure-title">图6-4a　exp90口径下匹配前倾向得分分布</p>
+<div class="figure-box">【此处插入图6-4b：exp90口径下匹配后倾向得分分布】</div>
+<p class="figure-title">图6-4b　exp90口径下匹配后倾向得分分布</p>
+<p>图6-4a和图6-4b用于检验高强度供应链金融采用对创新质量趋势稳定性的影响。该处理口径对应更高强度、更集中化的供应链金融应用，应重点检验处理组和控制组在研发基础、创新能力、规模及治理特征方面是否具有充分共同支撑。</p>
+
+<p>协变量标准化差异图用于进一步检验匹配前后控制变量的平衡性。图中应比较各协变量在处理前后的绝对标准化差异，并尽量统一横轴尺度。若匹配后绝对标准化差异整体下降且多数控制在较低范围内，则说明处理组与控制组在可观测协变量上更为接近。正式制图时可在10%位置设置参考线，但正文表述必须以实际图形为依据。</p>
+
+<div class="figure-box">【此处插入图6-5：exp75口径下协变量标准化差异图】</div>
+<p class="figure-title">图6-5　exp75口径下协变量标准化差异图</p>
+<div class="figure-box">【此处插入图6-6：focal口径下协变量标准化差异图】</div>
+<p class="figure-title">图6-6　focal口径下协变量标准化差异图</p>
+<div class="figure-box">【此处插入图6-7：exp50口径下协变量标准化差异图】</div>
+<p class="figure-title">图6-7　exp50口径下协变量标准化差异图</p>
+<div class="figure-box">【此处插入图6-8：exp90口径下协变量标准化差异图】</div>
+<p class="figure-title">图6-8　exp90口径下协变量标准化差异图</p>
+
+<p class="table-title page-break">表6-12　倾向得分处理与双重差分法（PSM-DID）检验</p>
+<table class="academic">
+<colgroup><col style="width:19%"><col style="width:16.2%"><col style="width:16.2%"><col style="width:16.2%"><col style="width:16.2%"><col style="width:16.2%"></colgroup>
+<thead>
+<tr><th>变量</th><th>（1）<br>经营效率水平</th><th>（2）<br>经营效率水平</th><th>（3）<br>关系延续程度</th><th>（4）<br>关系延续程度</th><th>（5）<br>创新质量趋势稳定性</th></tr>
+</thead>
+<tbody>
+<tr><td>处理变量</td><td>SCF_exp</td><td>SCF_focal</td><td>SCF_exp</td><td>SCF_focal</td><td>SCF_exp</td></tr>
+<tr><td>Treat×Post</td><td>0.2187*</td><td>−0.3794*</td><td>0.2414***</td><td>0.2129*</td><td>0.5477***</td></tr>
+<tr><td>标准误</td><td>(0.1287)</td><td>(0.1928)</td><td>(0.0595)</td><td>(0.1285)</td><td>(0.1980)</td></tr>
+<tr><td>t值</td><td>1.699</td><td>−1.967</td><td>4.055</td><td>1.657</td><td>2.766</td></tr>
+<tr><td>p值</td><td>0.0904</td><td>0.0501</td><td>&lt;0.001</td><td>0.0988</td><td>0.0061</td></tr>
+<tr class="sep"><td>处理口径</td><td>exp75</td><td>focal</td><td>exp50</td><td>focal</td><td>exp90</td></tr>
+<tr><td>估计方法</td><td>DID</td><td>DID</td><td>DID</td><td>IPW-DID</td><td>DID</td></tr>
+<tr><td>Controls</td><td>是</td><td>是</td><td>是</td><td>是</td><td>是</td></tr>
+<tr><td>核心企业固定效应</td><td>是</td><td>是</td><td>是</td><td>是</td><td>是</td></tr>
+<tr><td>年份固定效应</td><td>是</td><td>是</td><td>是</td><td>是</td><td>是</td></tr>
+<tr><td>行业×年份固定效应</td><td>是</td><td>是</td><td>否</td><td>是</td><td>是</td></tr>
+<tr><td>地区×年份固定效应</td><td>是</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
+<tr class="sep"><td>Observations</td><td>1,001</td><td>1,001</td><td>1,143</td><td>922</td><td>1,005</td></tr>
+<tr><td>R²</td><td>0.8529</td><td>0.8511</td><td>0.5875</td><td>0.7554</td><td>0.6509</td></tr>
+</tbody>
+</table>
+<p class="note">注：***、**、*分别表示在1%、5%、10%的水平上显著，括号内为聚类至核心企业层面的稳健标准误。exp50、exp75和exp90分别表示核心企业供应链金融采用强度达到正值样本第50、第75和第90百分位及以上；focal表示核心企业首次以供应链金融供给方参与供应链金融安排。第（4）列采用基于倾向得分的逆概率加权双重差分估计，其余列采用事件型双重差分估计。第（5）列使用经过缩尾处理的创新质量趋势稳定性口径，但正文变量名称不保留W_等技术前缀。</p>
+
+<p>表6-12第（1）列显示，在exp75处理口径下，处理组与处理后时期交互项系数为0.2187，并在10%的水平上显著为正。这表明核心企业供应链金融采用强度首次达到较高水平后，其所对应供应链的经营效率显著提高。该结果说明，在缓解可观测样本自选择问题后，供应链金融采用强度通过资金流、订单流、结算流和交易数据的协同组织提高供应链经营连续性与资源配置效率的结论仍然成立。</p>
+
+<p>第（2）列中，focal处理效应为−0.3794，并在10%的水平上显著为负。该方向与基准回归一致，说明企业首次承担供应链金融供给方角色后，信用审核、风险承担、平台运营和多主体协调等新增职能可能在短期内增加组织成本和管理复杂性，使供给方角色尚未立即转化为供应链经营效率提升。因此，供给方参与具有明显的维度差异，不能被简单等同于运营效率改善。</p>
+
+<p>第（3）列显示，在exp50口径下，处理效应为0.2414，并在1%的水平上显著为正。这说明核心企业供应链金融采用达到中等以上强度后，供应商关系延续程度显著提高。供应链金融通过改善账期安排、交易预期、信用识别和履约保障，能够降低核心企业与供应商持续合作中的不确定性，从而提高供应链生态关系的稳定性。</p>
+
+<p>第（4）列中，供给方参与的IPW-DID系数为0.2129，并在10%的水平上显著为正。这表明在利用倾向得分权重提高供给方企业与非供给方企业可比性后，核心企业首次承担供应链金融供给方角色仍有助于提高供应商关系延续程度。该结果与供给方参与对经营效率的负向结果并不矛盾：供给方角色可能在短期内增加运营成本，但同时通过信用支持、交易增信和合作预期稳定增强供应链关系黏性。鉴于该结果处于10%的显著性水平，本文将其界定为边际显著的补充支持。</p>
+
+<p>第（5）列显示，在exp90口径下，处理效应为0.5477，并在1%的水平上显著为正。这说明核心企业供应链金融采用达到较高强度后，供应链创新质量趋势稳定性显著提高。较高强度的供应链金融采用能够提高资金安排、交易协同和信息治理的连续性，为核心企业及其上游供应商持续研发和创新投入提供更稳定的经营环境，从而降低供应链创新质量发生剧烈负向波动的可能性。</p>
+
+<p>总体而言，PSM-DID结果与基准回归、工具变量法和两阶段选择校正结果总体一致。供应链金融采用强度对供应链运营韧性、生态韧性和演进韧性的正向作用均得到进一步支持；供给方参与则表现出差异化影响，即其在短期内可能降低供应链经营效率，但有助于稳定供应商合作关系。由此可见，供应链金融采用强度更容易形成跨韧性维度的普遍改善，而供给方角色的作用主要体现为关系治理收益与运营组织成本之间的权衡。</p>
+
+<p class="note">文件说明：当前归档材料尚未提供与四种最终处理口径完全对应的PNG或GPH诊断图，因此本文档保留图6-1至图6-8的规范占位框。正式定稿时，应使用最终分析面板或已保存的倾向得分、共同支撑标识和匹配权重生成并替换图件。</p>
+</body>
+</html>
